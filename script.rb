@@ -4,8 +4,9 @@ puts Telegram::Bot::VERSION
 
 token = $TELEGRAM_TOKEN
 img = "IMG_9622.JPG"
-
-img_array = Dir.foreach(dir).select { |x| File.file?("#{dir}/#{x}") }
+img2 = "IMG_6946.HEIC"
+img_arr = Dir.foreach("./assets").select { |x| File.file?("#{"./assets"}/#{x}") }
+p img_arr
 
 # 1. Make script to choose random image from assets folder
 # 2. Let people add the bot to their channel/group
@@ -18,7 +19,7 @@ Telegram::Bot::Client.run(token) do |bot|
     when '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
     when '/photo'
-      bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new("./assets/#{img_array.sample}", 'image/jpeg' || 'image/heic'))
+      bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new("./assets/#{img2}",  'image/jpeg'))
     end
   end
 end
