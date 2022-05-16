@@ -1,2 +1,6 @@
 assets/
 .env
+.bundle
+vendor/
+.gitignore
+api_key.rb

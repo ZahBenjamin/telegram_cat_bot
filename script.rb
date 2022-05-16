@@ -1,9 +1,11 @@
-gem 'telegram-bot-ruby', '~>0.19.2'
-
 require 'telegram/bot'
-require '.env'
+require_relative 'api_key.rb'
+puts Telegram::Bot::VERSION
 
-token = 'API_ID'
+token = $TELEGRAM_TOKEN
+# 1. Make telegram bot in telegram
+# 2. Make script to choose random image from assets folder
+# 3. Let people add the bot to their channel/group
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
