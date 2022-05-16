@@ -12,8 +12,8 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text
     when '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
-    when '/stop'
-      bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
+    when '/photo'
+      bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new('./assets/IMG_9622.JPG', 'image/jpeg'))
     end
   end
 end
