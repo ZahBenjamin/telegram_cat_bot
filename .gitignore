@@ -4,3 +4,5 @@ assets/
 vendor/
 .gitignore
 api_key.rb
+mango_cat.gif
+qrcode.png
