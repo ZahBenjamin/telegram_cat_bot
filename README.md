@@ -18,13 +18,13 @@ This is a Ruby based bot on telegram that sends a cat photo when you ping the bo
 ## Installation
 To install the bot in your group use this QR code!
 
-![QR!](./qrcode.png)
+![QR!](./readme/qrcode.png)
 
 
 ## Demo
 
 
- ![Sample Gif](./mango_cat.gif) 
+ ![Sample Gif](./readme/mango_cat.gif) 
 
 
 ## Technologies
